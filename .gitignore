@@ -116,6 +116,8 @@ celerybeat.pid
 .venv
 env/
 venv/
+.flaskenv
+miEntornoVirtual/
 ENV/
 env.bak/
 venv.bak/
