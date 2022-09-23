@@ -10,3 +10,8 @@ class User(db.Model):
     #permite imprimir el objeto usuario y mostrar datos
     def __repr__(self):
         return '<User {}>'.format(self.username)
+
+class Login(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String(64), index=True)
+    timestamp = db.Column(db.Date())
