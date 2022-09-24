@@ -7,7 +7,9 @@ import datetime
 
 def login():
     body = request.get_json()
-    login = Login(username=body["username"], timestamp=datetime.datetime.now())
+    timestamp = datetime.datetime.now()
+    print(timestamp)
+    login = Login(username=body["username"], timestamp=timestamp)
 
     try:
         db.session.add(login)
